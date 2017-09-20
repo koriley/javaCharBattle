@@ -5,16 +5,30 @@ public class Player {
     private int dex;
     private int hp;
     private String name;
+    private int armor;
+    private int damageBase;
+    private int weaponSize;
+    private int fatigue;
 
 
 
     public Player(String name) {
-        this.str = (int)(Math.random()*10)+1;
-        this.dex = (int)(Math.random()*10)+1;
+        this.str = (int)(Math.random()*100)+1;
+        this.dex = (int)(Math.random()*100)+1;
         this.hp = (int)(Math.random()*100)+1;
         this.name = name;
+        this.fatigue = 0;
+        //sets the weapon base damage
 
         //System.out.println("player created");
+    }
+
+    public int getFatigue() {
+        return fatigue;
+    }
+
+    public void setFatigue(int fatigue) {
+        this.fatigue = fatigue;
     }
 
     public int getStr() {
@@ -42,5 +56,33 @@ public class Player {
     }
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getArmor() {
+        return armor;
+    }
+
+    public void setArmor(int armor) {
+        this.armor = armor;
+    }
+
+    public int getDamageBase() {
+        return damageBase;
+    }
+
+    public void setDamageBase(int damageBase) {
+        this.damageBase = damageBase;
+    }
+
+    public int getWeaponSize() {
+        return weaponSize;
+    }
+
+    public void setWeaponSize(int weaponSize) {
+        this.weaponSize = weaponSize;
     }
 }

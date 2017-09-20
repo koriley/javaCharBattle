@@ -158,7 +158,14 @@ public class Main{
     public static void main(String args[]){
         Player player1 = new Player("player1");
         Player player2 = new Player("player2");
+        System.out.println("initial hp: player 1 = "+player1.getHp()+" and player 2 = "+player2.getHp());
 
+        Weapons.weapons(player1);
+        Weapons.weapons(player2);
+        System.out.println("initial damage: player 1 = "+player1.getDamageBase()+" and player 2 = "+player2.getDamageBase());
+        System.out.println("player 1 -> str: "+player1.getStr()+" dex: "+player1.getDex());
+        System.out.println("player 2 -> str: "+player2.getStr()+" dex: "+player2.getDex());
+        System.out.println("---------------------start fight----------------------------");
         Combat.combat(player1, player2);
 
 
