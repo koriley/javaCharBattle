@@ -165,6 +165,8 @@ public class Main{
         System.out.println("initial damage: player 1 = "+player1.getDamageBase()+" and player 2 = "+player2.getDamageBase());
         System.out.println("player 1 -> str: "+player1.getStr()+" dex: "+player1.getDex());
         System.out.println("player 2 -> str: "+player2.getStr()+" dex: "+player2.getDex());
+        System.out.println("player 1 weaponSize -> "+player1.getWeaponSize());
+        System.out.println("player 2 weaponSize -> "+player2.getWeaponSize());
         System.out.println("---------------------start fight----------------------------");
         Combat.combat(player1, player2);
 

@@ -9,13 +9,14 @@ public class Player {
     private int damageBase;
     private int weaponSize;
     private int fatigue;
+    private boolean tired = false;
 
 
 
     public Player(String name) {
-        this.str = (int)(Math.random()*100)+1;
-        this.dex = (int)(Math.random()*100)+1;
-        this.hp = (int)(Math.random()*100)+1;
+        this.str = (int)(Math.random()*15)+3;
+        this.dex = (int)(Math.random()*15)+3;
+        this.hp = (int)(Math.random()*20)+6;
         this.name = name;
         this.fatigue = 0;
         //sets the weapon base damage
@@ -84,5 +85,13 @@ public class Player {
 
     public void setWeaponSize(int weaponSize) {
         this.weaponSize = weaponSize;
+    }
+
+    public boolean isTired() {
+        return tired;
+    }
+
+    public void setTired(boolean tired) {
+        this.tired = tired;
     }
 }
